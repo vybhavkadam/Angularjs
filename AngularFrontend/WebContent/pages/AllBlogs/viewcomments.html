@@ -1,0 +1,40 @@
+<head>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+    color: #e6e6e6;
+}
+tbody {
+ border: 1px solid black;
+    color: #e6e6e6;
+}
+th {
+    background-color:  #008fb3;
+    color: white;
+}
+</style>
+</head>
+
+<div class="modal-body">
+				<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>Comment</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="comment in com">
+			<td>{{comment.blogid}}</td>
+				<td>{{comment.name}}</td>
+				<td>{{comment.comment}}</td>
+				
+			</tr>
+		</tbody>
+	</table>
+				</div>

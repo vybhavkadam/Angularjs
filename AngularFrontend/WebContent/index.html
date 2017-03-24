@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html ng-app="myApp"
+	data-ng-init="login=true;friend=false;home=false;blogs=false;adminblog=false;allblogs=false;chat=false;userforum=false;userjobs=false;adminforum=false;register=true;addblog=false;jobs=false;addjobs=false;blogs=false">
+  <!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-cookies.min.js"></script>
+	
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saga</title>
+    <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="web/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="web/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="web/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="web/css/style.css">
+    <!-- =======================================================
+        Theme Name: Bethany
+        Theme URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
+        Author: BootstrapMade.com
+        Author URL: https://bootstrapmade.com
+    ======================================================= -->
+  </head>
+  <body>
+    <!--header-->
+    <header class="main-header" id="header">
+        <div class="bg-color">
+            <!--nav-->
+            <nav class="nav navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                            <a href="index.html" class="navbar-brand">Saga</a>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-right" id="mynavbar">
+                            <ul class="nav navbar-nav">
+                                <!-- <li class="active"><a href="#header">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#login">Login</a></li>
+                                <li><a href="#register">Register</a></li> -->
+                               <li><a href="#/home" ng-show="home" >Home</a></li>
+				<li><a ng-show="blogs" class="page-scroll" href="#/blog">Blog</a></li>
+				<li><a ng-show="adminblog" href="#adminblog"><i
+						class="page-scroll"></i> Blogs</a></li> 
+				<li><a href="#allblogs" ng-show="allblogs"><i
+						class="page-scroll"></i> AllBlogs</a></li>
+				<li><a href="#job" ng-show="jobs"><i class="page-scroll"></i>Jobs</a></li>
+				<li><a href="#userjobs" ng-show="userjobs"> <i
+						class="page-scroll"></i> Jobs</a></li>
+				<li><a href="#adminforum" ng-show="adminforum"><i
+						class="page-scroll"></i> Forums</a></li>
+				<li><a href="#userforum" ng-show="userforum"><i
+						class="page-scroll"></i> Forums</a></li>
+				<li><a href="#friendslist" ng-show="friendslist"> <i
+						class="page-scroll"></i> Friends</a></li>
+				<li><a href="#/chat">Chat</a></li>
+				<li><a href="#/about">About</a></li>
+				<li><a ng-show="login" class="page-scroll" href="#/login">Login</a></li>
+				<li><a ng-show="register" class="page-scroll" href="#/register">Register</a></li>
+				<li><a ng-show="logout" href="#logout"><i
+						class="page-scroll"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!--/ nav-->
+            <div class="container text-center">
+                <div class="wrapper wow fadeInUp delay-05s" >
+                    <h2 class="top-title">Collaboration Project</h2>
+                    <h3 class="title">Saga</h3>
+                    <h4 class="sub-title">We Create Blogs,Jobs and forum</h4>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--/ header-->
+    <!---->
+    	<div ng-view></div>
+    <!---->
+    <!---->
+    <footer class="" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 footer-copyright">
+                    © Bethany Theme - All rights reserved
+                    <div class="credits">
+                        <!-- 
+                            All the links in the footer should remain intact. 
+                            You can delete the links only if you purchased the pro version.
+                            Licensing information: https://bootstrapmade.com/license/
+                            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bethany
+                        -->
+                        Designed by <a href="https://bootstrapmade.com/">Bootstrap Themes</a>
+                    </div>
+                </div>
+                <div class="col-sm-5 footer-social">
+                    <div class="pull-right hidden-xs hidden-sm">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!---->
+    <!--contact ends-->
+    <script src="web/js/jquery.min.js"></script>
+    <script src="web/js/jquery.easing.min.js"></script>
+    <script src="web/js/bootstrap.min.js"></script>
+    <script src="web/js/wow.js"></script>
+    <script src="web/js/custom.js"></script>
+
+<script src="js/app.js"></script>
+<script src="pages/Register/RegisterController.js"></script>
+<script src="pages/Home/UserHomeController.js"></script>
+	<script src="pages/UserLogin/LoginController.js"></script>
+	<script src="pages/UserLogin/LogoutController.js"></script> 
+	<script src="pages/Friend/FriendsListController.js"></script>   
+	<script src="pages/Jobs_Admin/AdminJobsController.js"></script> 
+	<script src="pages/Jobs_User/UserJobsController.js"></script> 
+	<script src="pages/Forum_User/UserForumController.js"></script> 
+	<script src="pages/Forum_Admin/AdminForumController.js"></script> 
+	<script src="pages/AllBlogs/AllBlogsController.js"></script> 
+	<script src="pages/Blog/BlogController.js"></script> 
+	<script src="pages/Blog_Admin/AdminBlogController.js"></script> 
+	 
+    
+  </body>
+</html>
