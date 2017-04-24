@@ -1,3 +1,57 @@
-<h1>Chat</h1>
+<!DOCTYPE HTML>
+<h4>Welcome, {{uname}}</h4>
+<html lang="en">
+<head>
+<link
+	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
+	rel="stylesheet" type="text/css" />
+<!-- <link href="resources/css/style.css" rel="stylesheet" type="text/css" /> -->
+<style>
+body {
+	background: url(chat.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  
+	/* background: url(http://www.alexanderdesignsgh.com/img/slide1-bg.jpg)
+		no-repeat center fixed;
+	background-size: cover;
+	border-radius: 5px;
+	padding: 20px; */
+}
 
-<h3>{{message}}</h3>
+h4{
+	color:#1a0000 ;
+}
+
+p, span {
+    color:#1a0000 ;
+} 
+</style>
+</head>
+<body ng-controller="chatController">
+	<div class="container">
+		<form ng-submit="addMessage()" name="messageForm">
+			<input type="text" placeholder="Compose a new message..." ng-model="message" />
+			<br>
+			<br>
+			<div class="in">
+				<span class="count" ng-bind="max - message.length"
+					ng-class="{danger: message.length > max}">140</span>
+				<button class="btn-btn-primary btn-sm"
+					ng-disabled="message.length > max || message.length === 0">Send</button>
+			</div>
+		</form>
+		<hr />
+		<p ng-repeat="message in messages | orderBy:'time':true" class="message">
+			<time>{{message.time | date:'HH:mm'}}</time>
+			&nbsp;&nbsp;<!-- &nbsp;&nbsp;&nbsp; -->
+			<span ng-class="{self: username.self}">{{message.username}}</span> :
+			<!-- <span ng-class="{self: username.self}">{{uname}}</span> : -->
+			<span ng-class="{self: message.self}">{{message.message}}</span>  						
+			
+		</p>
+	</div>
+</body>
+</html>

@@ -33,7 +33,8 @@ app.config(function($routeProvider) {                       // cookies instead o
   })
   
   .when('/chat', {
-    templateUrl : 'pages/Chat/chat.html'
+    templateUrl : 'pages/Chat/chat.html',
+    controller : "chatController"
   })
   
   .when("/userjobs", {

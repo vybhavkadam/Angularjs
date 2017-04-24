@@ -1,6 +1,6 @@
 
 				app.controller("UserHomeController",function($scope,$http,$rootScope)	
-						{	
+			{	
 					console.log("in userHome controller");
 					$scope.findfriends=function()
 					{
